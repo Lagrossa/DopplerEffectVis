@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Radial : MonoBehaviour
 {
+    public float radius;
+
     void OnDrawGizmos()
     {
 
