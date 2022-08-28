@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Radial : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnDrawGizmos()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
