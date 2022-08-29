@@ -7,10 +7,8 @@ public class Radial : MonoBehaviour
 {
     public float radius;
 
-    public void Start()
-    {
-_
-    }
+   
+
     void OnDrawGizmos()
     {
         Handles.color = Color.blue;
