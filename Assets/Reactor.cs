@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Reactor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject trigger;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if(trigger.GetComponent<Radial>().radius > (transform.position - trigger.transform.position).magnitude)
+        {
+
+        }
     }
 }
