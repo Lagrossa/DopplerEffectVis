@@ -13,6 +13,7 @@ _
     }
     void OnDrawGizmos()
     {
+        Handles.color = Color.blue;
         Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
     }
 }
