@@ -8,7 +8,6 @@ public class Radial : MonoBehaviour
     public float radius;
 
    
-
     void OnDrawGizmos()
     {
         radius += .01f;
@@ -19,5 +18,7 @@ public class Radial : MonoBehaviour
         {
             radius = 0;
         }
+
+        SceneView.RepaintAll();    
     }
 }
