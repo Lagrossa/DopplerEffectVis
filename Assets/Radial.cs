@@ -6,6 +6,14 @@ using UnityEditor;
 public class Radial : MonoBehaviour
 {
     public float radius;
+    // Use OOP to classify the rays as individual objects and if that object overlaps with a circle then it will light it green
+    // - Only set it green for the duration of the collision
+    // Change it from radial [containing] to collision based
+    // Loop through multiple rays which expand to a designated radius (can still be assigned here)
+    // Possibly include moving circles
+    // Calculate the frequency in which a circle is activated by getting the time from the current activation to the previous
+    // 
+    
 
    
     void OnDrawGizmos()
