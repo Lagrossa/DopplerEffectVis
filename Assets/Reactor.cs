@@ -15,7 +15,7 @@ public class Reactor : MonoBehaviour
         }
         else
         {
-            Gizmos.color = Color.gray;
+            Gizmos.color = Color.white;
         }
 
         Gizmos.DrawSphere(transform.position, radius);
