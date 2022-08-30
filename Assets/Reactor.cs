@@ -8,9 +8,15 @@ public class Reactor : MonoBehaviour
 
     private void Update()
     {
-        if(trigger.GetComponent<Radial>().radius > (transform.position - trigger.transform.position).magnitude)
+        if(trigger.GetComponent<Radial>().radius >= (transform.position - trigger.transform.position).magnitude)
         {
-
+            Gizmos.color = Color.green;
         }
+        else
+        {
+            Gizmos.color = Color.gray;
+        }
+
+        Gizmos.DrawSphere(transform.position, .05f);
     }
 }
