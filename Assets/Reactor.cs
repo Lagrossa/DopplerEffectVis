@@ -5,6 +5,7 @@ using UnityEngine;
 public class Reactor : MonoBehaviour
 {
     public GameObject trigger;
+    public float radius;
 
     private void OnDrawGizmos()
     {
@@ -17,6 +18,6 @@ public class Reactor : MonoBehaviour
             Gizmos.color = Color.gray;
         }
 
-        Gizmos.DrawSphere(transform.position, .05f);
+        Gizmos.DrawSphere(transform.position, radius);
     }
 }
