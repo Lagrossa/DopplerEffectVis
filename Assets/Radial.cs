@@ -12,14 +12,14 @@ public class Radial : MonoBehaviour
     // Loop through multiple rays which expand to a designated radius (can still be assigned here)
     // Possibly include moving circles
     // Calculate the frequency in which a circle is activated by getting the time from the current activation to the previous
-    // 
+    // Used to display that an object at a further distance will have a 
     
 
    
     void OnDrawGizmos()
     {
         radius += .01f;
-        Handles.color = Color.blue;
+        Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
 
         if(radius > 7)
