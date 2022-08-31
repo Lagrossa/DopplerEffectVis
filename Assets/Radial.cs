@@ -5,7 +5,14 @@ using UnityEditor;
 
 public class Radial : MonoBehaviour
 {
-    public float radius;
+    [Range(0,1)]
+    public float colorR;
+    [Range(0, 1)]
+    public float colorG;
+    [Range(0, 1)]
+    public float colorB;
+    public float radius; // Size of expansion
+    public float speed;
     // Use OOP to classify the rays as individual objects and if that object overlaps with a circle then it will light it green
     // - Only set it green for the duration of the collision
     // Change it from radial [containing] to collision based
@@ -18,11 +25,11 @@ public class Radial : MonoBehaviour
    
     void OnDrawGizmos()
     {
-        radius += .01f;
-        Handles.color = Color.cyan;
+        radius += speed;
+        Handles.color = new Color(colorR, colorG, colorB);
         Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
 
-        if(radius > 7)
+        if(radius > 7 || radius < -7)
         {
             radius = 0;
         }
