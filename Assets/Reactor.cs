@@ -13,6 +13,7 @@ public class Reactor : MonoBehaviour
     public float lastTick;
     public float frequency;
     public float rangeOfViability;
+    public float determinantFrame;
 
     public bool checking;
     public float checkTimer;
@@ -26,6 +27,7 @@ public class Reactor : MonoBehaviour
             trigger = pList[x];
             if (checking && trigger.GetComponent<Radial>().radius >= (transform.position - trigger.transform.position).magnitude - rangeOfViability && trigger.GetComponent<Radial>().radius <= (transform.position - trigger.transform.position).magnitude + rangeOfViability)
             {
+                Debug.Log("Activated");
                 Gizmos.color = Color.green;
                 frequency = currentTime - lastTick;
                 lastTick = currentTime;
@@ -33,7 +35,12 @@ public class Reactor : MonoBehaviour
             }
             else
             {
-                Gizmos.color = Color.white;
+                determinantFrame++;
+                if(determinantFrame > 120){
+                    Gizmos.color = Color.white;
+                    determinantFrame = 0;
+                }
+                
             }
 
         }
