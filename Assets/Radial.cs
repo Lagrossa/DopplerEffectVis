@@ -20,9 +20,19 @@ public class Radial : MonoBehaviour
     // Possibly include moving circles
     // Calculate the frequency in which a circle is activated by getting the time from the current activation to the previous
     // Used to display that an object at a further distance will have a 
-    
 
-   
+    private void Start()
+    {
+        //initialize all values
+        colorR = transform.GetComponentInParent<Radial>().colorR;
+        colorG = transform.GetComponentInParent<Radial>().colorG;
+        colorB = transform.GetComponentInParent<Radial>().colorB;
+        speed = transform.GetComponentInParent<Radial>().speed;
+
+
+
+    }
+
     void OnDrawGizmos()
     {
         radius += speed;
