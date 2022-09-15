@@ -27,7 +27,7 @@ public class Radial : MonoBehaviour
         colorR = transform.GetComponentInParent<Radial>().colorR;
         colorG = transform.GetComponentInParent<Radial>().colorG;
         colorB = transform.GetComponentInParent<Radial>().colorB;
-        speed = transform.GetComponentInParent<Radial>().speed;
+        speed = transform.GetComponentInParent<Radial>().speed + Random.Range(0,1)*.1f;
 
 
 
